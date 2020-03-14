@@ -1,25 +1,45 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <meta charset="UTF-8">
-  <title>let and const</title>
-</head>
-<body>
-<script>
-  function setWidth() {
-    var width = 100;
-    console.log(width);
-  }
-  setWidth();
+  <head>
+    <meta charset="UTF-8" />
+    <title>let and const</title>
+  </head>
+  <body>
+    <script>
+      //1
+      // function setWidth() {
+      //   var width = 100;
+      //   console.log(width);
+      // }
+      // setWidth();
 
-  var age = 100;
-  if(age > 12) {
-    const dogYears = age * 7;
-    console.log(`You are ${dogYears} dog years old!`);
-  }
+      // var age = 100;
+      // if (age > 12) {
+      //   var dogYears = age * 7;
+      //   console.log(`You are ${dogYears} dog years old!`);
+      // }
 
-  let height = 200;
-  const key = 'abc123';
-</script>
-</body>
+      // let height = 200;
+      // const key = 'abc123';
+
+      //2
+      const key = 'abc123';
+      var points = 50;
+      var winner = false;
+
+      // if (points > 40) {
+      //   console.log('it run1');
+      //   var winner = true;
+      // }
+
+      //const wirable cant be update, let can by update
+
+      const person = {
+        name: 'bart',
+        age: '25'
+      };
+
+      const bart = Object.freeze(person); // method freez object, a frozen object can no longer be changed.
+    </script>
+  </body>
 </html>
