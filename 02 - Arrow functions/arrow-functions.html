@@ -1,35 +1,48 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <meta charset="UTF-8">
-  <title>Arrow functions → → </title>
-</head>
-<body>
-<script>
-  const names = ['wes', 'kait', 'lux'];
+  <head>
+    <meta charset="UTF-8" />
+    <title>Arrow functions → →</title>
+  </head>
+  <body>
+    <script>
+      const names = ['wes', 'kait', 'lux'];
 
-  const fullNames = names.map(function(name) {
-    return `${name} bos`;
-  });
+      const fullNames = names.map(function(name) {
+        return `${name} bos`;
+      });
 
-  const fullNames2 = names.map((name) => {
-    return `${name} bos`;
-  });
+      console.log(' Old version =  ' + fullNames);
 
-  const fullNames3 = names.map(name => {
-    return `${name} bos`;
-  });
+      // version 2 arrow function
 
-  const fullNames4 = names.map(name => `${name} bos`);
+      const fullNames2 = names.map(name => {
+        return `${name} bos`;
+      });
 
-  const fullNames5 = names.map(() => `cool bos`);
+      console.log('Array Function version = ' + fullNames2);
 
-  const sayMyName = (name) => {
-    alert(`Hello ${name}!`)
-  }
+      // version 3 arrow function - delate return
 
-  sayMyName('Wes');
+      const fullNames3 = names.map(name => `${name} bos`);
 
-</script>
-</body>
+      console.log('Array Function version 3  = ' + fullNames3);
+
+      //version 4 if you dont have any argument
+      const fullNames4 = names.map(() => `barts  bos`);
+
+      console.log(
+        'Array Function version 4 (no any arguments: )  = ' + fullNames4
+      );
+
+      // function sayMyName(name) {
+      //   alert(`Hello ${name}`);
+      // }
+
+      const sayMyName = name => {
+        alert(`Hello ${name}!`);
+      };
+      sayMyName('bart');
+    </script>
+  </body>
 </html>
