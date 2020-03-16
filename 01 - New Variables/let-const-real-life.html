@@ -6,12 +6,16 @@
   </head>
   <body>
     <script>
-      (function() {
-        var name = 'art';
+      {
+        const name = 'art';
         console.log(name);
-      })();
+      }
 
-      // skończyłeś na 1:50 kursu odcinek 03
+      for (let i = 0; i < 10; i++) {
+        setTimeout(function() {
+          console.log('the number is ' + i);
+        }, 1000);
+      }
     </script>
   </body>
 </html>
