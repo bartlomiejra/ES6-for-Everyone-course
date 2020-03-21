@@ -6,6 +6,7 @@
   </head>
   <body>
     <script>
+<<<<<<< HEAD
       function calculateBill(total, tax = 0.13, tip = 0.15) {
         tax = tax || 0.13;
         tip = tip || 0.15;
@@ -14,6 +15,13 @@
       }
       const totalBill = calculateBill(100, undefined, 0.25);
       console.log(totalBill);
+=======
+      function calculateBill(total, tax, tip) {
+        return total + (total + tax) + (total + tip);
+      }
+      const totalBill(100, 0.13, 0.15)
+      consol.log(totalBill);
+>>>>>>> 233110d61d26779938d955bdfaffb1aa1bfc2fae
     </script>
   </body>
 </html>
