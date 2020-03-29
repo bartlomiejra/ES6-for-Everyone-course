@@ -13,6 +13,31 @@
         city: 'Hamilton',
         twitter: '@wesbos'
       };
+
+      const { first, last, twitter } = person;
+
+      const wes = {
+        first: 'Wes',
+        last: 'Bos',
+        links: {
+          social: {
+            twitter: 'http://twitter.com/wesbos',
+            facebook: 'http://facebook.com/wesbos.developer'
+          },
+          web: {
+            blog: 'http://wesbos.com'
+          }
+        }
+      };
+      const { twitter: tweet, facebook: fb } = wes.links.social;
+
+      const settings = { width: 300, color: 'black' }; // height, fontSize
+      const {
+        width = 100,
+        height = 100,
+        color = 'blue',
+        fontSize = 25
+      } = settings;
     </script>
   </body>
 </html>
