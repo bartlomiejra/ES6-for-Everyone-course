@@ -23,8 +23,9 @@
 
       // .repeat()
 
-      function leftPad(str, legnth = 20) {
-        return ``;
+      function leftPad(str, length = 20) {
+        // 20 value is a lenght of empty string
+        return `=> ${' '.repeat(length - str.length)}${str}`;
       }
 
       console.log(leftPad(make));
