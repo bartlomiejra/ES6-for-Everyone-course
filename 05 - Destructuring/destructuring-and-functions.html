@@ -19,12 +19,21 @@
       const { USD, AUD } = convertCurrency(100);
       console.log(USD, AUD);
 
+<<<<<<< HEAD
       function tipCalc({ total = 100, tip = 0.15, tax = 0.13 } = {}) {
         return total + tip * total + tax * total;
       }
       const bill = tipCalc();
       console.log(bill);
 
+=======
+      function tipCalc({ total, tip = 0.15, tax = 0.13 }) {
+        return total + tip * total + tax * total;
+
+        tipCalc({ total: 200, tip: 0.2 });
+        console.log(bill);
+      }
+>>>>>>> 1a8553e2388c940b0b890f806e21017864953593
       //3:49
     </script>
   </body>
