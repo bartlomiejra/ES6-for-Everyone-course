@@ -13,7 +13,7 @@
 <script>
   const people = [...document.querySelectorAll('.people p')];
   console.log(people);
-  const names = people.map();
+  const names = people.map((person) => person.textContent);
 
 
   const deepDish = {
@@ -22,7 +22,27 @@
     ingredients: ['Marinara', 'Italian Sausage', 'Dough', 'Cheese']
   };
 
-  
+  const shoppingList = ['Milk', 'Flour' ,...deepDish.ingredients];
+  console.log(shoppingList);
+
+
+  const comments = [
+  { id: 209384, text: 'I love your dog!' },
+  { id: 2011384, text: 'I love your horse!' },
+  { id: 2012384, text: 'I love chess!' },
+  { id: 20912384, text: 'Wuhan!' },
+
+  ];
+  const id = 2012384;
+  const commentIndex = comments.findIndex(comment => comment.id === id);
+  console.log(commentIndex);
+
+  const newComments = [...comments.slice(0,commentIndex), ...comments.slice(commentIndex + 1)];
+  console.log(newComments);
+this.setState({ comment: newComments})
+
+
 </script>
 </body>
 </html>
+  
