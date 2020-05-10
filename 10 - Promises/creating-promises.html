@@ -4,22 +4,21 @@
   <meta charset="UTF-8">
   <title>Creating Promises!</title>
 </head>
-<body>
-<script>
-  const p = new Promise((resolve, reject) => {
-    setTimeout(() => {
-      reject(Error('Err wes isn\'t cool'));
-    }, 1000);
-  });
 
-  p
-    .then(data => {
-      console.log(data);
-    })
-    .catch(err => {
-      console.error(err);
-    });
+<body> 
 
+<script> 
+//crate a promise
+const p = new Promise ((resolve, reject) => {
+setTimeout(() => {
+  reject('Err wes isn\'t cool ');
+}, 1000);
+
+
+p.then(data => {
+  console.log(data);
+
+});
 </script>
 </body>
 </html>
