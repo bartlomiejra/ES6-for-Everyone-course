@@ -10,15 +10,15 @@
 <script> 
 //crate a promise
 const p = new Promise ((resolve, reject) => {
-setTimeout(() => {
-  reject('Err wes isn\'t cool ');
-}, 1000);
-
-
-p.then(data => {
-  console.log(data);
-
+resolve('Wes is cool');
 });
+
+p
+  .then(data =>{
+    console.log(data);
+  })  
+
+
 </script>
 </body>
 </html>
