@@ -6,8 +6,34 @@
 </head>
 <body>
 <script>
- 
+  class Animal {
+    constructor(name){
+      this.name = name;
+      this.thirst = 100;
+      this.belly = [];
+    }
+    drink(){
+      this.thirst -=10;
+      return this.thirst;
+    }
+    eat(food){
+      this.belly.push(food)
+      return this.belly;
 
+    }
+  }
+class Dog extends Animal{
+    constructor(name, breed){
+      super(name); // we us metode super becouse we must first create object animal before we create class Dog!
+      this.breed = breed;
+    }
+    bark() {
+      console.log('Bark Bark Im a dog');
+    }
+  }
+
+const rhino = new Animal('Rhiney');
+const snickers = new Dog('Snickers', 'Wilczurrr');
 </script>
 </body>
 </html>
