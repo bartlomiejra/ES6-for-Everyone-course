@@ -6,16 +6,18 @@
 </head>
 <body>
 <script>
-  const phoneHandler = {
-    set(target, name, value) {
-      target[name] = value.match(/[0-9]/g).join('');
+  
+  const phonHandler = { 
+    set(target, name, value){
+      target[name]=value.match(/[0-9]/g).join('');
     },
-    get(target, name) {
-      return target[name].replace(/(\d{3})(\d{3})(\d{4})/, '($1)-$2-$3');
+    get(target, name){
+      return target[name].replace(/(\d{3})(\d{3})(\d{4})/,'($1)-$2-$3');
     }
+  
   }
+const phonNumbers = new Proxy({}, phonHandler);
 
-  const phoneNumbers = new Proxy({}, phoneHandler);
 </script>
 </body>
 </html>
